@@ -20,7 +20,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test', [TestController::class, 'index']);
+Route::get('/test', [TestController::class, 'test']);
+Route::get('/index', [TestController::class, 'index']);
 Route::get('/getSize/{age}', [TestController::class, 'getSize'])->middleware(CheckAge::class);
 
 //获取CSRFtoken
